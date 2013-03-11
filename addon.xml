@@ -7,7 +7,7 @@
     <extension point="xbmc.ui.screensaver" library="screensaver.py" />
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">A simple Proof of Concept Python Screensaver</summary>
-        <description lang="en">A simple Proof of Concept Python Screensaver</description>
+        <summary lang="en">Photojournalism Screensaver</summary>
+        <description lang="en">The Image Script "The Big Pictures" as Screensaver.</description>
     </extension>
 </addon>
