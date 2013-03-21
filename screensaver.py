@@ -38,14 +38,9 @@ class Screensaver(xbmcgui.WindowXMLDialog):
             self.exit_callback = exit_callback
 
         def onScreensaverDeactivated(self):
-            self.log('onScreensaverDeactivated')
             self.exit_callback()
 
-        def log(self, msg):
-            print u'TheBigPictures Screensaver ExitMonitor: %s' % msg
-
     def onInit(self):
-        self.log('onInit')
         self.abort_requested = False
         self.started = False
         self.exit_monitor = self.ExitMonitor(self.exit)
@@ -78,7 +73,7 @@ class Screensaver(xbmcgui.WindowXMLDialog):
                     )
                     self.set_photo(photo)
                     for i in xrange(self.picture_duration / 500):
-                        self.log('check abort %d' % (i + 1))
+                        #self.log('check abort %d' % (i + 1))
                         if self.abort_requested:
                             self.log('slideshow abort_requested')
                             self.exit()
@@ -89,7 +84,7 @@ class Screensaver(xbmcgui.WindowXMLDialog):
             self.loader_control.setVisible(False)
             self.started = True
         picture_url = photo['pic']
-        self.log('photo: %s' % picture_url)
+        #self.log('photo: %s' % picture_url)
         self.picture_control.setImage(picture_url)
         self.source_control.setLabel(photo['source'])
         self.title_control.setLabel(photo['title'])
