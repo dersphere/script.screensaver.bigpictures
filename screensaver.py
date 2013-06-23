@@ -84,6 +84,7 @@ class Screensaver(xbmcgui.WindowXMLDialog):
                         if self.abort_requested:
                             self.log('slideshow abort_requested')
                             self.exit()
+                            return
                         xbmc.sleep(500)
 
     def set_photo(self, photo):
